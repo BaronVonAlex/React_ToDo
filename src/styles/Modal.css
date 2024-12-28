@@ -1,0 +1,110 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .modal {
+    background: #2d3748;
+    color: var(--text-dark);
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dark .modal h2 {
+    color: var(--text-dark);
+}
+
+.modal-input {
+    width: calc(100% - 32px);
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    border: 2px solid var(--border-light);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.dark .modal-input {
+    background: #2d3748;
+    border-color: var(--text-dark);
+    color: var(--text-dark);
+}
+
+.dark .modal-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+}
+
+.dark .todo-item {
+    border-color: var(--text-dark);
+}
+
+.dark .todo-item:hover {
+    border-color: var(--primary);
+}
+
+.dark .search-bar {
+    border-color: var(--text-dark);
+}
+
+.dark .search-bar:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.modal-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.modal-button.save {
+    background-color: var(--primary);
+    color: white;
+}
+
+.modal-button.save:hover {
+    background-color: var(--primary-hover);
+}
+
+.modal-button.cancel {
+    background-color: var(--danger);
+    color: white;
+}
+
+.modal-button.cancel:hover {
+    background-color: var(--danger-hover);
+}
